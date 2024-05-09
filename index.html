@@ -1,0 +1,420 @@
+<!--
+ ┌──────────────────────────────────────────────────────────────────────┐
+ │ @name         CV generator PDF                                       │
+ │ @author       Malek Kastalli                                         │
+ │ @version      1.0                                                    │
+ │ @link                                                                │
+ │ @modified     2023-05-02                                             │
+ │ @description                                                         │
+ └──────────────────────────────────────────────────────────────────────┘
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>KASTALLI Malek CV</title>
+
+        <!-- Import Fontawesome -->
+        <script src="https://kit.fontawesome.com/cb81440751.js" crossorigin="anonymous"></script>
+
+        <!-- Import stylesheets in CSS3 -->
+        <link rel="stylesheet" href="assets/stylesheets/style.css" type="text/css">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/pictures/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/pictures/favicon/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/pictures/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/pictures/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="assets/pictures/favicon/android-chrome-512x512.png">
+    </head>
+
+    <body>
+        <header class="l-header" id="header">
+            <!-- Nav menu -->
+            <nav class="nav bd-container">
+                <a href="#" class="nav_logo">Malek KASTALLI</a>
+                <div class="nav_menu" id="nav-menu">
+                    <ul class="nav_list">
+
+                        <li class="nav_item">
+                            <a href="#home" class="nav_link active-link">
+                                <i class="fa-solid fa-house nav_icon"></i>Home
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#profile" class="nav_link">
+                                <i class="fa-solid fa-user nav_icon"></i>Profile
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#skills" class="nav_link">
+                                <i class="fa-solid fa-computer nav_icon"></i>Skills
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#languages" class="nav_link">
+                                <i class="fa-solid fa-comments nav_icon"></i>Languages
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#experience" class="nav_link">
+                                <i class="fa-solid fa-briefcase nav_icon"></i>Experiences
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#certificates" class="nav_link">
+                                <i class="fa-solid fa-graduation-cap nav_icon"></i>Certificates
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#education" class="nav_link">
+                                <i class="fa-solid fa-book-bookmark nav_icon"></i>Education
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a href="#interests" class="nav_link">
+                                <i class="fa-solid fa-icons nav_icon"></i>Interests
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main bd-container">
+            <!-- Resume CV -->
+            <div class="resume" id="area-cv">
+                <div class="resume_left">
+
+                    <!-- HOME -->
+                    <section class="home" id="home">
+                        <div class="home_container section bd-grid">
+
+                            <div class="home_data bd-grid">
+                                <img src="assets/pictures/profile.jpg" alt="Icon picture" class="home_img" id="home-img">
+                                <!--<img alt="Icon picture" class="home_img" id="home-img">-->
+                                <h1 class="home_title">MALEK <b>KASTALLI</b></h1>
+                                <h3 class="home_profession">Technicien IT</h3>
+                                <div>
+                                    <a download="" id="download-button" class="home_button-movil">Download</a>
+                                </div>
+                            </div>
+
+                            <div class="home_address bd-grid">
+                                <span class="home_information">
+                                    <i class="fa-solid fa-location-dot home_icon"></i>Route de l'Isle 5A, 1148, Cuarnens
+                                </span>
+                                <span class="home_information">
+                                    <a href="mailto:kastallimalek@hotmail.fr" class="home_link">
+                                        <i class="fa-solid fa-envelope home_icon"></i> kastallimalek@hotmail.fr
+                                    </a>
+                                </span>
+                                <span class="home_information">
+                                    <a href="tel:+41779165370" class="home_link">
+                                        <i class="fa-solid fa-phone home_icon"></i> (+41) 07.79.16.53.70
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Theme change button -->
+                        <i class="fa-solid fa-moon change-theme" title="Theme" id="theme-button"> <p style="font-size: 9px;">MODE</p></i>
+                      
+
+
+                        <!-- Button to generate and download the pdf. Available for desktop. -->
+                        <i class="fa-solid fa-download generate-pdf" title="Generate PDF" id="resume-button"><p style="font-size: 11px;">PDF</p></i>
+
+                    </section>
+
+                    <!-- SOCIAL -->
+                    <section class="social section">
+                        <h2 class="section-title">Social</h2>
+
+                        <div class="social_container bd-grid">
+                            <a href="https://github.com/kastallimalek" target="_blank" class="social_link">
+                                <i class="fa-brands fa-github social_icon"></i> @Kastallinalek
+                            </a>
+                            <a href="https://www.linkedin.com/in/malek-kastalli/" target="_blank" class="social_link">
+                                <i class="fa-brands fa-linkedin social_icon"></i> Malek-Kastalli
+                            </a>
+                            
+                        </div>
+                        
+                    </section>
+
+                    <!-- PROFILE -->
+                    <section class="profile section" id="profile">
+                        <h2 class="section-title">Profile</h2>
+
+                        <p class="profile_description">
+                            Technicien IT passionné et polyvalent, avec une solide expérience dans le support technique, la maintenance informatique et la résolution de problèmes. <br> </br>Compétences approfondies des systèmes et des logiciels, avec une forte capacité d'adaptation et d'apprentissage continu. Connaissances de base en gestion de réseaux, avec une volonté de monter en compétence dans ce domaine. Excellentes aptitudes en communication technique pour collaborer efficacement avec les clients et les équipes
+                        </p>
+                    </section>
+
+                   <!-- SKILLS  -->
+<section class="skills section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills_container">
+        <ul class="skills_content bd-grid">
+            <li class="skills_name">• Maintenance informatique</li>
+            <li class="skills_name">• Gestion de Réseaux et de Systèmes</li>
+            <li class="skills_name">• Adaptabilité et Apprentissage Continu</li>
+            <li class="skills_name">• Communication Technique</li>
+        </ul>
+    </div>
+</section>
+
+
+                    <!-- LANGUAGES -->
+                    <section class="languages section" id="languages">
+                        <h2 class="section-title">Languages</h2>
+
+                        <div class="languages_container">
+                            <ul class="languages_content bd-grid">
+                                <li class="languages_name">
+                                    <span class="languages_text">Francais</span>
+                                    <span class="languages_stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </li>
+                                <li class="languages_name">
+                                    <span class="languages_text">English</span>
+                                    <span class="languages_stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star languages_stars_checked"></i>
+                                        <i class="fa-solid fa-star languages_stars_checked"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="resume_right">
+
+                    <!-- EXPERIENCE -->
+                    <section class="experience section" id="experience">
+                        
+                        <h2 class="section-title">Experience</h2>
+
+                        <div class="experience_container bd-grid">
+                            
+                            
+                             <!-- 1 --> 
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                    <span class="experience_line"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">TECHNICIEN SYSTÈME RÉSEAU</h3>
+                                    <span class="experience_company">Meanquest | Meanquest, Ecublens (Vaud)</span>
+                                    <span class="experience_description">Décembre 2022 - Present</span>
+                                    <p class="experience_description"> • Assuré un support technique de premier niveau à une clientèle diversifiée chez Meanquest.<br> • Maintient et optimisation des infrastructures informatiques, veillant au fonctionnement optimal des systèmes d'exploitation, des solutions de sécurité, des applications, des serveurs et du matériel informatique.<br> • Fournir un support technique par téléphone et lors d'interventions sur site, garantissant une résolution rapide et efficace des problèmes.<br> • Réalisé des tâches d'administration sur les pare-feu (Sophos XG/SG, Fortigate), de solutions de virtualisation (VMWare, Microsoft Hyper-V, Citrix), la gestion de contrôleurs de domaine (M365 Azure AD/Entra ID, Active Directory) et l'administration d'outils de mailing (Exchange, M365 Online).<br> • Utilisé des systèmes de ticketing sophistiqués (ManageEngine ServiceDesk, ServiceNow, Jira Service Management) pour une gestion méthodique et rigoureuse des incidents et des demandes.<br> • Centreon pour le monitoring proactif des infrastructures serveur, assurant une surveillance continue et une gestion optimale de l'environnement informatique.<br> • Développement de compétence spécifique dans la gestion de logiciels métier tels qu'Abacus, Dentagest, Paymaker, Opale.. Renforçant la capacité à satisfaire les exigences opérationnelles et techniques des clients. </p>
+                                </div>
+                            </div>
+                             <!-- 1 --> 
+
+
+                            <!-- 2 -->
+                            <div class="experience_content">
+                                <div class="experience_time">
+                                    <span class="experience_rounder"></span>
+                                    <span class="experience_line"></span>
+                                </div>
+                                <div class="experience_data bd-grid">
+                                    <h3 class="experience_title">TECHNICIEN SYSTÈME RÉSEAU</h3>
+                                    <span class="experience_company">NOVATIM - Ville de Paris</span>
+                                    <span class="experience_description">Nov. 2021 – Nov. 2022 1 an</span>
+                                    <p class="experience_description">
+                                        • Gestion de Parc Informatique et Support Technique.<br>
+                                        • Pilotage efficace de la gestion de parc pour divers clients, garantissant une performance optimale et une satisfaction utilisateur.<br>
+                                        • Expertise en administration et déploiement de serveurs physiques et virtuels, avec une maîtrise Windows Server, Hyper-V et ESX, assurant une infrastructure fiable et sécurisée.<br>
+                                        • Surveillance proactive et maintenance rigoureuse des équipements informatiques clients (serveurs, postes de travail, pare-feu, etc.), minimisant le temps d'arrêt et maximisant la productivité des utilisateurs.<br>
+                                        • Gestion habile des incidents, offrant un support de niveau N1/N2 par téléphone, prise en main à distance ou intervention sur site, favorisant une résolution rapide et efficace des problèmes.<br>
+                                        • Elaboration de documentation technique détaillée, facilitant la compréhension et l'adoption des systèmes par tous les utilisateurs.<br>
+                                        • Excellente communication et gestion des relations avec les différents interlocuteurs clients, assurant une compréhension claire des besoins et une collaboration harmonieuse.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            
+                            <!-- 3 --> <div class="experience_content"> <div class="experience_time"> <span class="experience_rounder"></span> <span class="experience_line"></span> </div> <div class="experience_data bd-grid"> <h3 class="experience_title">INDÉPENDANT</h3> <span class="experience_company">KASTAL - Agence WEB | KASTAL - Agence WEB, Ville de Paris</span> <span class="experience_description">Janv. 2021 - Sep. 2021 · 9 mois</span> <p class="experience_description"> • Développement et Gestion de Sites Web Vitrine et E-Commerce.<br> • Fourniture d'un accompagnement spécialisé et de conseils stratégiques personnalisés, visant à aligner les objectifs commerciaux avec la présence en ligne.<br> • Conception et développement de sites vitrine et e-commerce, mettant l'accent sur l'expérience utilisateur, la fonctionnalité et l'esthétique pour captiver et convertir les visiteurs en clients.<br> • Optimisation continue et maintenance rigoureuse des sites web, assurant des performances optimales, une sécurité renforcée et une expérience utilisateur. </p> </div> </div> <!-- 3 -->
+                            
+                            <!-- 4 --><div class="experience_content"> <div class="experience_time"> <span class="experience_rounder"></span> <span class="experience_line"></span> </div> <div class="experience_data bd-grid"> <h3 class="experience_title">ÉDUCATEUR SPÉCIALISÉ</h3> <span class="experience_company">Le Silence des Justes (Adultes et Enfants Autistes) | Pantin</span> <span class="experience_description">Oct. 2020 - Déc. 2020 · 3 mois</span> <p class="experience_description"> • Conception et exécution de programmes éducatifs personnalisés pour favoriser l'autonomie et les compétences sociales.<br> • Collaboration avec les familles et professionnels pour une approche intégrée du développement des personnes autistes.<br> • Application de techniques comportementales adaptées pour encourager la communication et l'interaction sociale.<br> • Suivi régulier des progrès et ajustement des stratégies éducatives pour assurer une amélioration continue.<br> • Organisation d'activités stimulantes pour renforcer la confiance en soi et l'indépendance. </p> </div> </div> <!-- 4 -->
+                            
+                            <!-- 5 --> <div class="experience_content"> <div class="experience_time"> <span class="experience_rounder"></span> <span class="experience_line"></span> </div> <div class="experience_data bd-grid"> <h3 class="experience_title">TECHNICIEN SYSTÈMES D'INFORMATION</h3> <span class="experience_company">Gentil Geek | Gentil Geek, Ville de Paris</span> <span class="experience_description">Sept. 2019 - Sept. 2020 · 1 an 1 mois</span> <p class="experience_description"> • Services de Support et de Dépannage Informatique pour Particuliers et PME.<br> • Fourniture d'interventions de dépannage informatique réactives et efficaces, destinées à résoudre une variété de problèmes informatiques pour les particuliers et les PME.<br> • Elimination de logiciels malveillants pour les ordinateurs affectés par des virus, garantissant la sécurité et la protection des données.<br> • Installation et configuration d'imprimantes, assurant une intégration fluide dans les environnements informatiques existants.<br> • Restauration de mots de passe de session perdus, permettant aux utilisateurs de regagner rapidement l'accès à leurs systèmes et fichiers.<br> • Sensibilisation et formation des particuliers aux meilleures pratiques informatiques, renforçant leur compréhension et leur capacité à naviguer dans le monde numérique de manière sécurisée et efficace. </p> </div> </div> <!-- 5 -->
+
+                            <!-- 6 --> <div class="experience_content"> <div class="experience_time"> <span class="experience_rounder"></span> <span class="experience_line"></span> </div> <div class="experience_data bd-grid"> <h3 class="experience_title">TECHNICIEN ITINÉRANT</h3> <span class="experience_company">SYMAG by BNP Paribas | Ile-de-France</span> <span class="experience_description">Avr. 2020 - Juil. 2020 · 4 mois</span> <p class="experience_description"> • Exécution de visites techniques chez des clients pour réaliser des opérations de révision et de mise à jour sur les systèmes informatiques dédiés aux points de vente.<br> • Mise en place rigoureuse du système d'exploitation Windows XP POS, établissant une base solide et sécurisée pour les opérations de caisse.<br> • Installation stratégique d'unités centrales aux stations de caisse, visant une intégration transparente et une performance système accrue.<br> • Mise en fonction et ajustement d'imprimantes, assurant une fiabilité et une efficacité constantes pour les impressions transactionnelles.<br> • Ajustement et mise en réseau précis des dispositifs de paiement, permettant des transactions sûres et aisées pour les clients.<br> • Remplacement ciblé de composants tels que disques durs et scanners, renforçant la robustesse et la réactivité du parc informatique existant. </p> </div> </div> <!-- 6 -->
+                            
+                            <!-- 7 --> <div class="experience_content"> <div class="experience_time"> <span class="experience_rounder"></span> <span class="experience_line"></span> </div> <div class="experience_data bd-grid"> <h3 class="experience_title">GARDIEN ECOLE</h3> <span class="experience_company">Mairie de Saint Denis | Mairie de Saint Denis, Saint-Denis</span> <span class="experience_description">Déc. 2015 - Avr. 2018 · 2 ans 5 mois</span> <p class="experience_description"> • Responsabilité de la surveillance des environs de l'établissement scolaire, assurant une présence vigilante pour garantir la sécurité des élèves.<br> • Engagement à maintenir un environnement sûr et sécurisé au sein de l'école, contribuant ainsi au bien-être et à la tranquillité d'esprit des élèves et du personnel.<br> • Gestion et suivi attentif des stocks nécessaires au fonctionnement harmonieux des services internes, veillant à ce que les ressources soient toujours disponibles et bien organisées. </p> </div> </div> <!-- 7 -->
+
+
+                            <!-- END-XPERIENCE --> 
+                        </div>   
+                    </section>
+
+                    <!-- CERTIFICATES -->
+                    <section>
+                        <br> </br>
+                    </section><section>
+                        <br> </br>
+                    </section>
+                    <br></br>
+                    <section class="certificate section" id="certificates">
+                        <h2 class="section-title">Certificates</h2>
+
+                        <div class="certificate_container bd-grid">
+                            
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2024</h3>
+                                    <span class="certificate_title">HP Commercial and Consumer 
+                                        Desktops, Workstations and 
+                                        Notebooks Service Qualification
+                                        <span class="certificate_honours">
+                                            <a href="/Certificate.html" target="_blank">⇢ Lien vers l'attestation</a>
+                                          </span>
+                                        </span>
+                                </div>
+                            </div>
+
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2020</h3>
+                                    <span class="certificate_title">Cisco IT Essential
+                                        <span class="certificate_honours">
+                                            <a href="https://www.credly.com/badges/5a0da11c-8fa6-45d7-b463-70500413d0e4?source=linked_in_profile" target="_blank">⇢ Lien vers l'attestation</a>
+                                          </span>
+                                        </span>
+                                      </div>
+
+                            </div>
+                            <div class="certificate_content">
+                                <div class="certificate_item">
+                                    <span class="certificate_rounder"></span>
+                                </div>
+                                <div class="certificate_data bd-grid">
+                                    <h3 class="certificate_year">2019</h3>
+                                    <span class="certificate_title">Développeur Java App Android
+                                        <span class="certificate_honours">
+                                            <a href="https://attestation.3wa.fr/android/kastalli-malek" target="_blank">⇢ Lien vers l'attestation</a>
+                                          </span>
+                                        </span>
+                                      </div>
+                        </div>
+                    </section>
+
+                    <!-- EDUCATION -->
+                    <section class="education section" id="education">
+                        <h2 class="section-title">Education</h2>
+
+                        <div class="education_container bd-grid">
+                            <div class="education_content">
+                                <div class="education_time">
+                                    <span class="education_rounder"></span>
+                                    <span class="education_line"></span>
+                                </div>
+                                <div class="education_data bd-grid">
+                                    <h3 class="education_title">TECHNICIEN SUPÉRIEUR 
+                                        SYSTÈMES ET RÉSEAUX – BAC+2</h3>
+                                    <span class="education_studies">CEFIAC - France</span>
+                                    <span class="education_year">2021</span>
+                                </div>
+                            </div>
+                            <div class="education_content">
+                                <div class="education_time">
+                                    <span class="education_rounder"></span>
+                                    <span class="education_line"></span>
+                                </div>
+                                <div class="education_data bd-grid">
+                                    <h3 class="education_title">Analyste développeur d’applications informatiques (FULLSTACK)</h3>
+                                    <span class="education_studies">Coding Factory - France</span>
+                                    <span class="education_year">2019</span>
+                                </div>
+                            </div>
+                            
+                    
+                            
+                        
+                    </section>
+
+                    <!-- INTERESTS -->
+                    <section class="interests section" id="interests">
+                        <h2 class="section-title">Interests</h2>
+                        <div class="interests_container bd-grid">
+                            <div class="interests_content">
+                                <i class="fa-solid fa-paw interests_icon"></i>
+                                <span class="interests_name">Animales</span>
+                            </div>
+
+                            <div class="interests_content">
+                                <i class="fa-solid fa-film interests_icon"></i>
+                                <span class="interests_name">Film/Series</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-leaf interests_icon"></i>
+                                <span class="interests_name">Nature</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-code interests_icon"></i>
+                                <span class="interests_name">Programation</span>
+                            </div>
+                            <div class="interests_content">
+                                <i class="fa-solid fa-gamepad interests_icon"></i>
+                                <span class="interests_name">Jeux Videos</span>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class="fa-solid fa-arrow-up scrolltop_icon"></i>
+        </a>
+
+        <!-- HTML2PDF.js -->
+            <!-- Version 0.8.0 -->
+        <!-- <script src="assets/javascripts/html2pdf.v0.8.0.bundle.min.js"></script> -->
+            <!-- Version 0.9.3 -->
+        <script src="assets/javascripts/html2pdf.v0.9.3.bundle.min.js"></script>
+
+        <!-- Main Javascript file -->
+        <script src="assets/javascripts/main.js"></script>
+    </body>
+
+</html>
