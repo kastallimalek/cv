@@ -153,7 +153,7 @@ function generateResume() {
         // html2pdf.js options - Optimisé pour texte sélectionnable
         let opt = {
             margin: [10, 10, 10, 10],
-            filename: 'myResumeCV-dark.pdf',
+            filename: 'CV_Malek_Kastalli.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { 
                 scale: 2, 
@@ -176,7 +176,7 @@ function generateResume() {
         // html2pdf.js options - Optimisé pour texte sélectionnable
         let opt = {
             margin: [10, 10, 10, 10],
-            filename: 'myResumeCV-light.pdf',
+            filename: 'CV_Malek_Kastalli.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { 
                 scale: 2, 
