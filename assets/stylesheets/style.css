@@ -167,7 +167,7 @@ body.scale-cv {
 .scale-cv .education_container,
 .scale-cv .experience_container,
 .scale-cv .certificate_container {
-    width: 500px;
+    width: 100%;
     gap: 1rem;
 }
 
