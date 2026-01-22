@@ -171,7 +171,7 @@ function generateResume() {
             },
             pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
         };
-        html2pdf().set(opt).from(areaCV).save();
+        return html2pdf().set(opt).from(areaCV).save();
     } else {
         // html2pdf.js options - Optimisé pour texte sélectionnable
         let opt = {
@@ -194,7 +194,7 @@ function generateResume() {
             },
             pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
         };
-        html2pdf().set(opt).from(areaCV).save();
+        return html2pdf().set(opt).from(areaCV).save();
     }
 }
 
@@ -203,7 +203,7 @@ resumeButton.addEventListener("click", () => {
     // Adapt the area of the PDF
     addScaleCV();
     // Generate the PDF
-    generateResume();
-    // Remove adaptation after 1 second (you can choose to set more than 1 second if your PDF download time is long)
-    setTimeout(removeScaleCV, 1000);
+    generateResume()
+        .then(() => removeScaleCV())
+        .catch(() => removeScaleCV());
 });
