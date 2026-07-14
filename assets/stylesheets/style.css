@@ -807,3 +807,196 @@ body.dark-theme .interests_icon {
         padding-left: 0;
     }
 }
+
+/* ============================================= */
+/* PRINT — génération PDF native (window.print)  */
+/* Texte sélectionnable, ATS-friendly, A4        */
+/* ============================================= */
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 10mm;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        font-size: 9pt;
+        color: #000;
+    }
+
+    /* Masquer tout ce qui n'est pas le CV */
+    .l-header,
+    .scrolltop,
+    .change-theme,
+    .generate-pdf,
+    .home_button-movil,
+    .nav_toggle {
+        display: none !important;
+    }
+
+    /* Le container prend toute la largeur utile */
+    .bd-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Layout 2 colonnes identique au desktop */
+    .resume {
+        display: grid;
+        grid-template-columns: 38% 62%;
+        box-shadow: none;
+        background: #fff;
+    }
+
+    .resume_left {
+        background-color: #F0EFEF;
+        padding: 0 10mm;
+    }
+
+    .resume_right {
+        padding: 0 8mm 0 10mm;
+    }
+
+    /* Sections compactes */
+    .section {
+        padding: 6mm 0 4mm;
+    }
+
+    .section-title {
+        font-size: 11pt;
+        margin-bottom: 4mm;
+        text-align: left;
+        letter-spacing: .15rem;
+    }
+
+    /* Home */
+    .home_img {
+        width: 25mm;
+        height: 25mm;
+    }
+
+    .home_container {
+        gap: 4mm;
+    }
+
+    .home_title {
+        font-size: 16pt;
+    }
+
+    .home_profession {
+        font-size: 10pt;
+    }
+
+    /* Profil */
+    .profile_description {
+        text-align: left;
+        font-size: 9pt;
+        line-height: 1.4;
+    }
+
+    .profile_badge {
+        font-size: 8pt;
+        padding: 2px 8px;
+        border: 1px solid #403A3A;
+        color: #403A3A;
+        background: #FAFAFA;
+    }
+
+    /* Compétences */
+    .skills_content {
+        gap: 2mm;
+        padding-left: 0;
+    }
+
+    .skills_name {
+        font-size: 8.5pt;
+    }
+
+    /* Langues */
+    .languages_content {
+        gap: 1.5mm;
+        padding-left: 0;
+    }
+
+    .languages_text {
+        width: 30mm;
+        font-size: 8.5pt;
+    }
+
+    /* Étoiles : en print on garde les pleines noires,
+       les "checked" restent couleur du panneau gauche */
+    .languages_stars i {
+        font-size: 7pt;
+    }
+
+    /* Réseaux */
+    .social_container {
+        gap: 2mm;
+    }
+
+    /* Expérience / Formation / Certifs — timeline */
+    .experience_container,
+    .education_container,
+    .certificate_container {
+        gap: 4mm;
+    }
+
+    .experience_title,
+    .education_title,
+    .certificate_title {
+        font-size: 9.5pt;
+        font-weight: 600;
+    }
+
+    .experience_company,
+    .education_studies {
+        font-size: 8.5pt;
+    }
+
+    .experience_description,
+    .certificate_honours,
+    .education_year {
+        font-size: 8pt;
+        line-height: 1.35;
+    }
+
+    /* Centres d'intérêt */
+    .interests_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3mm;
+        padding-left: 0;
+    }
+
+    .interests_name {
+        font-size: 8pt;
+    }
+
+    .interests_icon {
+        font-size: 9pt;
+        color: #403A3A;
+    }
+
+    /* Éviter les coupures au milieu d'un bloc expérience */
+    .experience_content,
+    .education_content,
+    .certificate_content {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Les titres de section ne se retrouvent pas orphelins en bas de page */
+    .section-title {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    /* Forcer les couleurs de fond à s'imprimer */
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

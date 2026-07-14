@@ -114,96 +114,28 @@ themeButton.addEventListener("click", () => {
     }
 });
 
-/* Link PDF Download on Mobile screen depending of the light/dark mode */
+/* Link PDF Download on Mobile screen — uses native print too */
 
 const downloadButton = document.getElementById('download-button');
 
-downloadButton.addEventListener('click', () => {
-    if (document.body.classList.contains(darkTheme)) {
-        downloadButton.href = "assets/pdf/myResumeCV-dark.pdf";
-    } else {
-        downloadButton.href = "assets/pdf/myResumeCV-light.pdf";
-    }
-});
-
-/* Reduce the size and print on an A4 sheet */
-
-function addScaleCV() {
-    document.body.classList.add("scale-cv");
+if (downloadButton) {
+    downloadButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.print();
+    });
 }
 
-/* Remote the size when the CV is downloaded */
-
-function removeScaleCV() {
-    document.body.classList.remove("scale-cv");
-}
-
-/* Generate PDF */
-
-// PDF generated area
-let areaCV = document.getElementById('area-cv');
+/* Generate PDF — native browser print (texte sélectionnable, ATS-friendly) */
 
 // Button
 let resumeButton = document.getElementById("resume-button");
 
-// Generate PDF with html2pdf.js
+// Generate PDF via native print dialog
 function generateResume() {
-    // PDF filename change depending of the light/dark mode
-    if (document.body.classList.contains(darkTheme)) {
-        // html2pdf.js options - Optimisé pour texte sélectionnable
-        let opt = {
-            margin: [10, 10, 10, 10],
-            filename: 'CV_Malek_Kastalli.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { 
-                scale: 2, 
-                useCORS: true,
-                letterRendering: true,
-                allowTaint: false,
-                dpi: 300,
-                logging: false
-            },
-            jsPDF: { 
-                unit: 'mm',
-                format: 'a4', 
-                orientation: 'portrait',
-                compress: true
-            },
-            pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-        };
-        return html2pdf().set(opt).from(areaCV).save();
-    } else {
-        // html2pdf.js options - Optimisé pour texte sélectionnable
-        let opt = {
-            margin: [10, 10, 10, 10],
-            filename: 'CV_Malek_Kastalli.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { 
-                scale: 2, 
-                useCORS: true,
-                letterRendering: true,
-                allowTaint: false,
-                dpi: 300,
-                logging: false
-            },
-            jsPDF: { 
-                unit: 'mm',
-                format: 'a4', 
-                orientation: 'portrait',
-                compress: true
-            },
-            pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-        };
-        return html2pdf().set(opt).from(areaCV).save();
-    }
+    window.print();
 }
 
-// Action executed by clicking on the button => generation of the final PDF CV CV
+// Action executed by clicking on the button => opens print dialog
 resumeButton.addEventListener("click", () => {
-    // Adapt the area of the PDF
-    addScaleCV();
-    // Generate the PDF
-    generateResume()
-        .then(() => removeScaleCV())
-        .catch(() => removeScaleCV());
+    generateResume();
 });
