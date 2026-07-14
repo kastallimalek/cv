@@ -489,6 +489,20 @@ img {
     text-align: center;
 }
 
+.profile_badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    margin-top: .5rem;
+    padding: .35rem .75rem;
+    border: 1px solid var(--text-color);
+    border-radius: 1rem;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--text-color);
+    background-color: var(--container-color);
+}
+
 /* Education page */
 
 .education_content,
