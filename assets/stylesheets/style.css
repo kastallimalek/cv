@@ -650,7 +650,7 @@ body.dark-theme .certificate_rounder {
 }
 
 .languages_stars_checked {
-    color: var(--text-color-light);
+    color: var(--container-color-alt);
 }
 
 /* Interests */
