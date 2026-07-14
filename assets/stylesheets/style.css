@@ -816,12 +816,12 @@ body.dark-theme .interests_icon {
 @media print {
     @page {
         size: A4 portrait;
-        margin: 10mm;
+        margin: 0;
     }
 
     body {
         margin: 0;
-        padding: 0;
+        padding: 10mm;
         background: #fff;
         font-size: 9pt;
         color: #000;
@@ -854,11 +854,11 @@ body.dark-theme .interests_icon {
 
     .resume_left {
         background-color: #F0EFEF;
-        padding: 0 10mm;
+        padding: 0 6mm;
     }
 
     .resume_right {
-        padding: 0 8mm 0 10mm;
+        padding: 0 4mm 0 6mm;
     }
 
     /* Sections compactes */
